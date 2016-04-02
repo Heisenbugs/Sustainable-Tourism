@@ -1,7 +1,17 @@
-# How to insert
+# How to import
   In phpMyAdmin
   Create a new table tourism with Collation "utf8_general_ci"   
   Import the given SQL file.
+  
+# @Siam How to insert a new place
+  ইউজারের ইনপুট অনুযায়ী একটা প্লেস রো ক্রিয়েট হবে যেখানে places.place_type টা আসবে placetype.name থেকে। 
+ ইউজার ওই প্লেসে যেসব ট্যাগ ইউজ করবে, 
+প্রত্যেক ট্যাগের জন্য placetag টেবিলে একটা করে রো এড হবে, প্লেস এর প্লেস আইডি এবং ট্যাগের ট্যাগ আইডি দিয়ে।
+        
+এরপর address টেবিলে ইউজারের দেয়া country, division, district, city, thana অনুযায়ী একটা এড্রেস ক্রিয়েট হবে, যেটার  place_id হবে উপরে ক্রিয়েটেড প্লেস টার place_id.
+
+কান্ট্রি, ডিভিসন এই দুইটা বাদে বাকিগুলো খালি রাখা যাবে, সেক্ষেরে সেগুলো হবে Unknown.
+যেটা আগেই টেবিলে দেয়া আছে।
   
 # Sustainable-Tourism
 Project for the Hackathon
