@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2016 at 02:11 PM
+-- Generation Time: Apr 02, 2016 at 02:21 PM
 -- Server version: 5.6.28-0ubuntu0.15.10.1
 -- PHP Version: 5.6.11-1ubuntu3.1
 
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `organization` (
 
 CREATE TABLE IF NOT EXISTS `places` (
   `place_id` int(11) NOT NULL,
-  `place_type` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `place_type` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `place_name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `place_description` varchar(2048) COLLATE utf8_unicode_ci DEFAULT NULL,
   `place_address` int(11) DEFAULT NULL,
