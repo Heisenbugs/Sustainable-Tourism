@@ -1,6 +1,6 @@
 # How to insert
   In phpMyAdmin
-  Create a new table tourism with Collation "utf8_general_ci" 
+  Create a new table tourism with Collation "utf8_general_ci"   
   Import the given SQL file.
   
 # Sustainable-Tourism
