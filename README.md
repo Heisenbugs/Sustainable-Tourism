@@ -3,7 +3,21 @@
   Create a new table tourism with Collation "utf8_general_ci"   
   Import the given SQL file.
   
-# @Siam How to insert a new place
+#Example Query:
+This query gives us almost everything about a place that exists on the DB in proper human readable format.
+
+    SELECT places.place_id,places.place_name,places.place_type,division.division_name,district.district_name,thana.thana_name
+from places,division,district,thana,address
+WHERE
+places.place_id = address.place_id
+and division.division_id = address.division_id
+and district.district_id = address.district_id
+and thana.thana_id = address.thana_id
+ORDER BY `places`.`place_id` ASC
+
+
+  
+# @Siam the process/flow of inserting a new place
   ইউজারের ইনপুট অনুযায়ী একটা প্লেস রো ক্রিয়েট হবে যেখানে places.place_type টা আসবে placetype.name থেকে। 
  ইউজার ওই প্লেসে যেসব ট্যাগ ইউজ করবে, 
 প্রত্যেক ট্যাগের জন্য placetag টেবিলে একটা করে রো এড হবে, প্লেস এর প্লেস আইডি এবং ট্যাগের ট্যাগ আইডি দিয়ে।
