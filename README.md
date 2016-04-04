@@ -6,14 +6,15 @@
 #Example Query:
 This query gives us almost everything about a place that exists on the DB in proper human readable format.
 
+        
     SELECT places.place_id,places.place_name,places.place_type,division.division_name,district.district_name,thana.thana_name
-from places,division,district,thana,address
-WHERE
-places.place_id = address.place_id
-and division.division_id = address.division_id
-and district.district_id = address.district_id
-and thana.thana_id = address.thana_id
-ORDER BY `places`.`place_id` ASC
+    from places,division,district,thana,address
+    WHERE
+    places.place_id = address.place_id
+    and division.division_id = address.division_id
+    and district.district_id = address.district_id
+    and thana.thana_id = address.thana_id
+    ORDER BY `places`.`place_id` ASC
 
 
   
